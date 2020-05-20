@@ -1,0 +1,10 @@
+[package]
+name = "mistake"
+description = "An error handling crate for functions that produce multiple errors"
+repository = "https://github.com/rehwinkel/mistake"
+license-file = "LICENSE"
+version = "0.1.0"
+authors = ["Ian Rehwinkel <ian.rehwinkel@tutanota.com>"]
+edition = "2018"
+
+[dependencies]
