@@ -36,3 +36,13 @@ macro_rules! attempt {
         }
     };
 }
+
+#[macro_export]
+macro_rules! attempt_res {
+    ($result:expr, $errors:expr) => {
+        match $crate::Mistake::from($result).to_option(&mut $errors) {
+            Some(val) => val,
+            None => return crate::Mistake::Fail($errors),
+        }
+    };
+}
